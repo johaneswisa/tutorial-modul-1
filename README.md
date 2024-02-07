@@ -16,6 +16,6 @@ di modul ini adalah:
 Reflection 2
 
 1. Menjadi lebih tenang karena code kita sudah diverfikasi dan dites. 
-2. Tergantung complexity dari classnya. 
+2. Tergantung complexity dari classnya. Test lah segala fungsionalitas dari classnya. Pastikan sudah behave as expected.
 3. Unit-test kita sudah meng-cover segala hal yang testable di program kita.
 4. Belum tentu, karena code coverage sendiri hanya mengestimasi seberapa baik test case mengcover code kita. 
