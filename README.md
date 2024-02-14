@@ -28,7 +28,7 @@ Tutorial 2
 
 Reflection
 1. Saya membetulkan reliability issue yaitu minor bug di ProductList.html. Strategi saya
-adalah dengan mengikuti saran dari SonarCloud yaitu menambahkan elemen caption di tags table.
+adalah dengan mengikuti saran dari SonarCloud yaitu menambahkan elemen caption di tags table. Selain itu saya juga meremove public identifier karena test class dan methods JUnit5 harus memiliki visibilitas package default. 
 2. Implementasi saya sudah memenuhi CI/CD, karena:
    1. Terdapat workflows  “Continuous Integration (CI)” terimplementasi di
    ci.yml yang menjalankan job test. 
