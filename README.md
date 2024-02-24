@@ -34,3 +34,48 @@ adalah dengan mengikuti saran dari SonarCloud yaitu menambahkan elemen caption d
    ci.yml yang menjalankan job test. 
    2. Workflows untuk code scanning/analysis di sonarcloud.yml untuk mendeteksi code quality issues.
    3. Continuous deployment yaitu auto-deploy dengan platform koyeb.
+
+Tutorial 3
+
+Reflection
+1. Saya mengimplementasikan Single-responsibility Principle (SRP), Interface segregation principle (ISP),
+dan Dependency inversion principle (DIP).
+
+Berikut penjelasan dari Modul untuk prinsip-prinsip:
+
+SRP is a class that has only one reason to change. In other words, a class should have only one responsibility or encapsulate only one aspect of the software's functionality.
+
+ISPs recommend that large interfaces be broken down into smaller, more specific interfaces so that clients only need to know the methods that are relevant to them.
+
+DIP recommends that high-level modules do not depend on low-level modules. Both must rely on abstractions. 
+Additionally, abstraction should not depend on details; details must rely on abstraction.
+
+Saya meng-implement ISP dengan cara memecah interface CarService
+menjadi CarServiceGeneral dan CarServiceById.
+
+Saya meng-implement SRP dengan cara memisahkan CarController dan ProductController
+menjadi dua modul, masing-masing memiliki responsibility berbeda dalam konteks fungsionalitas software
+secara keseluruhan.
+
+Saya meng-implement DIP sejalan dengan implementasi ISP saya, yaitu di CarController
+saya buat agar modul tersebut rely on CarServiceGeneral dan CarServiceById (interfaces) dan bukan CarServiceImpl (public class).
+
+2. Explain the advantages of applying SOLID principles to your project with examples.
+
+-Code lebih mudah dimengerti, dalam implementasi SRP misalnya
+setiap class controller memiliki responsibilitinya masing-masing di codebase saya.
+
+-ISP: interfaces dipecah-pecah agar interface lebih kecil dan spesifik, clients hanya
+perlu tau method-method yang relevan, contoh: pemisahan interface CarService menjadi method yang lebih umum dan yang by id.
+
+-DIP: modul high dan low level mesti rely dengan abstractions agar class-classnya terikat secara tidak ketat
+sehingga saat mengubah satu class, class lain tidak ada kemungkinan untuk ikut rusak/break (saat terlalu tightly coupled). Contoh:
+CarController rely on CarServiceGeneral dan CarServiceById (interfaces) dan bukan CarServiceImpl (public class).
+
+3.  Explain the disadvantages of not applying SOLID principles to your project with examples.
+
+-Code lebih sulit dimengerti. Satu class controller memiliki 2 responsibility bisa membuat code tidak clean dan menyulitkan programmer lain.
+
+-Interfaces tidak dipecah-pecah: satu interface meng-handle banyak methods dan jadi menumpuk/tidak clean code.
+
+-modul high dan low level tidak rely ke abstractions: Misal kelas A bergantung kuat pada kelas B. saat kelas B ingin diganti implementasinya maka kelas A juga harus dimodifikasi langsung implementasinya. 
