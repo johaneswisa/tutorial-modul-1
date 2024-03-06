@@ -79,3 +79,17 @@ CarController rely on CarServiceGeneral dan CarServiceById (interfaces) dan buka
 -Interfaces tidak dipecah-pecah: satu interface meng-handle banyak methods dan jadi menumpuk/tidak clean code.
 
 -modul high dan low level tidak rely ke abstractions: Misal kelas A bergantung kuat pada kelas B. saat kelas B ingin diganti implementasinya maka kelas A juga harus dimodifikasi langsung implementasinya. 
+
+Reflection Tutorial 4
+
+1. You have followed the Test-Driven Development workflow in the Exercise. Now answer these questions:
+Reflect based on Percival (2017) proposed self-reflective questions (in “Principles and Best Practice of Testing” submodule, chapter “Evaluating Your Testing Objectives”), whether this TDD flow is useful enough for you or not. If not, explain things that you need to do next time you make more tests.
+
+2. You have created unit tests in Tutorial. Now reflect whether your tests have successfully followed F.I.R.S.T. principle or not. If not, explain things that you need to do the next time you create more tests.
+
+Jawaban: 
+1. TDD flow ini sudah sangat berguna bagi saya karena mengajarkan saya cara membuat
+program yang dites dengan baik dengan flow red, green, dan refactor. Ke depannya, saya akan konsisten untuk
+mengimplementasikan TDD sesering mungkin untuk program saya. 
+2. Saya rasa test-test sudah memenuhi FIRST principles yaitu Focused, independent, reusable, small dan testable.
+semua line code sudah memikirkan concern-concern dari FIRST seperti reduce dependencies maupun single responsibility. 
